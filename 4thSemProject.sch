@@ -1,0 +1,398 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Timer:NE555 U1
+U 1 1 5E2B071F
+P 6150 3400
+F 0 "U1" H 6150 3450 50  0000 C CNN
+F 1 "NE555" H 6150 3350 50  0000 C CNN
+F 2 "" H 6150 3400 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/ne555.pdf" H 6150 3400 50  0001 C CNN
+	1    6150 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR01
+U 1 1 5E2B2F83
+P 6150 2150
+F 0 "#PWR01" H 6150 2000 50  0001 C CNN
+F 1 "VCC" H 6167 2323 50  0000 C CNN
+F 2 "" H 6150 2150 50  0001 C CNN
+F 3 "" H 6150 2150 50  0001 C CNN
+	1    6150 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 2150 6150 2200
+Wire Wire Line
+	6150 2200 7500 2200
+Wire Wire Line
+	7500 2200 7500 2600
+Connection ~ 6150 2200
+Wire Wire Line
+	6150 2200 6150 3000
+$Comp
+L Device:R R6
+U 1 1 5E2B47CB
+P 7500 2750
+F 0 "R6" H 7570 2796 50  0000 L CNN
+F 1 "3.3k" H 7570 2705 50  0000 L CNN
+F 2 "" V 7430 2750 50  0001 C CNN
+F 3 "~" H 7500 2750 50  0001 C CNN
+	1    7500 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7500 3400 6650 3400
+Wire Wire Line
+	7500 2900 7500 3200
+$Comp
+L Device:R R7
+U 1 1 5E2B51ED
+P 7650 3400
+F 0 "R7" H 7720 3446 50  0000 L CNN
+F 1 "68k" H 7720 3355 50  0000 L CNN
+F 2 "" V 7580 3400 50  0001 C CNN
+F 3 "~" H 7650 3400 50  0001 C CNN
+	1    7650 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7500 3200 7650 3200
+Wire Wire Line
+	7650 3200 7650 3250
+Connection ~ 7500 3200
+Wire Wire Line
+	7500 3200 7500 3400
+Wire Wire Line
+	7650 3550 7650 3600
+Wire Wire Line
+	7650 3600 6650 3600
+Wire Wire Line
+	7650 3600 7650 3950
+Wire Wire Line
+	7650 3950 5400 3950
+Wire Wire Line
+	5400 3950 5400 3200
+Wire Wire Line
+	5400 3200 5650 3200
+Connection ~ 7650 3600
+$Comp
+L Device:C C5
+U 1 1 5E2B6F15
+P 7650 4100
+F 0 "C5" H 7765 4146 50  0000 L CNN
+F 1 "10nF" H 7765 4055 50  0000 L CNN
+F 2 "" H 7688 3950 50  0001 C CNN
+F 3 "~" H 7650 4100 50  0001 C CNN
+	1    7650 4100
+	1    0    0    -1  
+$EndComp
+Connection ~ 7650 3950
+$Comp
+L power:GND #PWR02
+U 1 1 5E2B7ADE
+P 6150 4400
+F 0 "#PWR02" H 6150 4150 50  0001 C CNN
+F 1 "GND" H 6155 4227 50  0000 C CNN
+F 2 "" H 6150 4400 50  0001 C CNN
+F 3 "" H 6150 4400 50  0001 C CNN
+	1    6150 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 3800 6150 4250
+Wire Wire Line
+	7650 4250 7100 4250
+Connection ~ 6150 4250
+Wire Wire Line
+	6150 4250 6150 4400
+$Comp
+L Device:C C3
+U 1 1 5E2B847F
+P 5050 3550
+F 0 "C3" H 5165 3596 50  0000 L CNN
+F 1 "100pF" H 5165 3505 50  0000 L CNN
+F 2 "" H 5088 3400 50  0001 C CNN
+F 3 "~" H 5050 3550 50  0001 C CNN
+	1    5050 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 3400 5050 3400
+Wire Wire Line
+	5050 3700 5050 4250
+Wire Wire Line
+	5050 4250 6150 4250
+$Comp
+L Device:CP1 C4
+U 1 1 5E2B94C5
+P 6950 3200
+F 0 "C4" V 7202 3200 50  0000 C CNN
+F 1 "100uF" V 7111 3200 50  0000 C CNN
+F 2 "" H 6950 3200 50  0001 C CNN
+F 3 "~" H 6950 3200 50  0001 C CNN
+	1    6950 3200
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6650 3200 6800 3200
+$Comp
+L Device:Buzzer BZ1
+U 1 1 5E2BB1F1
+P 7200 3750
+F 0 "BZ1" H 7352 3779 50  0000 L CNN
+F 1 "Buzzer" H 7352 3688 50  0000 L CNN
+F 2 "" V 7175 3850 50  0001 C CNN
+F 3 "~" V 7175 3850 50  0001 C CNN
+	1    7200 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7100 3200 7100 3650
+Wire Wire Line
+	7100 3850 7100 4250
+Connection ~ 7100 4250
+Wire Wire Line
+	7100 4250 6150 4250
+Wire Wire Line
+	6150 2200 4600 2200
+Wire Wire Line
+	4600 2200 4600 2650
+$Comp
+L Transistor_BJT:2N2219 Q3
+U 1 1 5E2BEE68
+P 4500 2850
+F 0 "Q3" H 4690 2896 50  0000 L CNN
+F 1 "2N2219" H 4690 2805 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-39-3" H 4700 2775 50  0001 L CIN
+F 3 "http://www.onsemi.com/pub_link/Collateral/2N2219-D.PDF" H 4500 2850 50  0001 L CNN
+	1    4500 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:1N4007 D2
+U 1 1 5E2C1DB2
+P 4600 3500
+F 0 "D2" V 4646 3421 50  0000 R CNN
+F 1 "1N4007" V 4555 3421 50  0000 R CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 4600 3325 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 4600 3500 50  0001 C CNN
+	1    4600 3500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4600 3050 4600 3350
+Wire Wire Line
+	4600 3650 4600 3750
+Wire Wire Line
+	4600 3750 5650 3750
+Wire Wire Line
+	5650 3750 5650 3600
+$Comp
+L Device:R R5
+U 1 1 5E2C7808
+P 4600 4050
+F 0 "R5" H 4670 4096 50  0000 L CNN
+F 1 "3.3k" H 4670 4005 50  0000 L CNN
+F 2 "" V 4530 4050 50  0001 C CNN
+F 3 "~" H 4600 4050 50  0001 C CNN
+	1    4600 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 3750 4600 3900
+Connection ~ 4600 3750
+Wire Wire Line
+	4600 4200 4600 4250
+Wire Wire Line
+	4600 4250 5050 4250
+Connection ~ 5050 4250
+$Comp
+L Device:R R4
+U 1 1 5E2C879E
+P 4050 3350
+F 0 "R4" H 4120 3396 50  0000 L CNN
+F 1 "470k" H 4120 3305 50  0000 L CNN
+F 2 "" V 3980 3350 50  0001 C CNN
+F 3 "~" H 4050 3350 50  0001 C CNN
+	1    4050 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4300 2850 4050 2850
+Wire Wire Line
+	4050 2850 4050 3200
+Wire Wire Line
+	4050 3500 4050 4250
+Wire Wire Line
+	4050 4250 4600 4250
+Connection ~ 4600 4250
+$Comp
+L Device:CP1 C1
+U 1 1 5E2CA28D
+P 3650 3350
+F 0 "C1" H 3765 3396 50  0000 L CNN
+F 1 "100uF" H 3765 3305 50  0000 L CNN
+F 2 "" H 3650 3350 50  0001 C CNN
+F 3 "~" H 3650 3350 50  0001 C CNN
+	1    3650 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 2200 3650 2200
+Wire Wire Line
+	3650 2200 3650 3200
+Connection ~ 4600 2200
+Wire Wire Line
+	3650 3500 3650 4250
+Wire Wire Line
+	3650 4250 4050 4250
+Connection ~ 4050 4250
+$Comp
+L Transistor_BJT:2N2219 Q2
+U 1 1 5E2CC381
+P 3100 2650
+F 0 "Q2" H 3290 2696 50  0000 L CNN
+F 1 "2N2219" H 3290 2605 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-39-3" H 3300 2575 50  0001 L CIN
+F 3 "http://www.onsemi.com/pub_link/Collateral/2N2219-D.PDF" H 3100 2650 50  0001 L CNN
+	1    3100 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3650 2200 3200 2200
+Connection ~ 3650 2200
+Wire Wire Line
+	3200 2200 3200 2450
+$Comp
+L Device:CP1 C2
+U 1 1 5E2D078D
+P 3900 2850
+F 0 "C2" V 4152 2850 50  0000 C CNN
+F 1 "22uF" V 4061 2850 50  0000 C CNN
+F 2 "" H 3900 2850 50  0001 C CNN
+F 3 "~" H 3900 2850 50  0001 C CNN
+	1    3900 2850
+	0    -1   -1   0   
+$EndComp
+Connection ~ 4050 2850
+Wire Wire Line
+	3200 2850 3750 2850
+$Comp
+L Device:R R3
+U 1 1 5E2D235D
+P 3000 3050
+F 0 "R3" V 2793 3050 50  0000 C CNN
+F 1 "10k" V 2884 3050 50  0000 C CNN
+F 2 "" V 2930 3050 50  0001 C CNN
+F 3 "~" H 3000 3050 50  0001 C CNN
+	1    3000 3050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3200 2850 3200 3050
+Wire Wire Line
+	3200 3050 3150 3050
+Connection ~ 3200 2850
+$Comp
+L Transistor_BJT:BC548 Q1
+U 1 1 5E2DC76A
+P 2500 3050
+F 0 "Q1" H 2691 3004 50  0000 L CNN
+F 1 "BC548" H 2691 3095 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 2700 2975 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 2500 3050 50  0001 L CNN
+	1    2500 3050
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2700 3050 2850 3050
+Wire Wire Line
+	2400 2850 2750 2850
+$Comp
+L Device:LED D1
+U 1 1 5E2E00A9
+P 2750 3600
+F 0 "D1" V 2789 3483 50  0000 R CNN
+F 1 "LED" V 2698 3483 50  0000 R CNN
+F 2 "" H 2750 3600 50  0001 C CNN
+F 3 "~" H 2750 3600 50  0001 C CNN
+	1    2750 3600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5E2E0833
+P 2750 4000
+F 0 "R2" H 2820 4046 50  0000 L CNN
+F 1 "330" H 2820 3955 50  0000 L CNN
+F 2 "" V 2680 4000 50  0001 C CNN
+F 3 "~" H 2750 4000 50  0001 C CNN
+	1    2750 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2750 2850 2750 3450
+Wire Wire Line
+	2750 3750 2750 3850
+Wire Wire Line
+	2750 4150 2750 4250
+Wire Wire Line
+	2750 4250 3650 4250
+Connection ~ 3650 4250
+Wire Wire Line
+	2400 3250 1950 3250
+Wire Wire Line
+	1950 3250 1950 2200
+Wire Wire Line
+	1950 2200 3200 2200
+Connection ~ 3200 2200
+Wire Wire Line
+	2900 2650 1750 2650
+$Comp
+L Device:R R1
+U 1 1 5E2E6CCE
+P 1750 3850
+F 0 "R1" H 1820 3896 50  0000 L CNN
+F 1 "200k" H 1820 3805 50  0000 L CNN
+F 2 "" V 1680 3850 50  0001 C CNN
+F 3 "~" H 1750 3850 50  0001 C CNN
+	1    1750 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1750 2650 1750 3700
+Wire Wire Line
+	1750 4000 1750 4250
+Wire Wire Line
+	1750 4250 2750 4250
+Connection ~ 2750 4250
+Wire Wire Line
+	1750 2650 1450 2650
+Connection ~ 1750 2650
+Wire Wire Line
+	1950 2200 1750 2200
+Wire Wire Line
+	1750 2200 1750 2500
+Wire Wire Line
+	1750 2500 1450 2500
+Connection ~ 1950 2200
+Text Notes 5300 2850 0    70   Italic 14
+Made By,\nChayan Deb
+Text Notes 1400 2800 1    62   ~ 0
+Rain Sensor
+$EndSCHEMATC
